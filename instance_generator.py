@@ -1,21 +1,21 @@
- 
+
 import random
 
+num_nodos = 10;
 
-'''
-def create_instance(num_nodos):
+def create_instance():
     instance = {}
     for i in range(1,num_nodos+1):
-        # Cantidad de nodos adyacentes tiene el nodo i
-        cantAdyacentes = random.randint(1,num_nodos-1)
-        lista_nodos_adyacentes = random.sample(range(1,num_nodos),cantAdyacentes)
-        while(i in lista_nodos_adyacentes):
-            cantAdyacentes = random.randint(1, num_nodos-1)
-            lista_nodos_adyacentes = random.sample(range(1,num_nodos),cantAdyacentes)
+        cantidad_adyacentes = random.randint(1, num_nodos-1);
+        lista_adyacencia = random.sample(range(1, num_nodos),cantidad_adyacentes);
+        while(i in lista_adyacencia):
+            cantidad_adyacentes = random.randint(1, num_nodos-1);
+            lista_adyacencia = random.sample(range(1, num_nodos),cantidad_adyacentes);
+    
+        lista_tuplas = [];
+        for j in range(0,len(lista_adyacencia)):
+            lista_tuplas.append((lista_adyacencia[j], random.randint(1,100)))
 
-        lista_tuplas=[]
-        for j in range(0,len(lista_nodos_adyacentes)):
-            lista_tuplas.append((lista_nodos_adyacentes[j],random.randint(1,1000)))
-        instance[i] = lista_tuplas
-
-    return(instance) '''
+        instance[i] = lista_tuplas;
+    #print(instance);
+    return(instance);
