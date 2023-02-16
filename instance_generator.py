@@ -18,4 +18,4 @@ def create_instance(num_nodos):
             lista_tuplas.append((lista_nodos_adyacentes[j],random.randint(1,1000)))
         instance[i] = lista_tuplas
 
-    return(instance)
+    return(instance) '''
