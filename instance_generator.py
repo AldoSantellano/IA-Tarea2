@@ -2,6 +2,7 @@
 import random
 
 
+'''
 def create_instance(num_nodos):
     instance = {}
     for i in range(1,num_nodos+1):
