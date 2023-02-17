@@ -1,7 +1,7 @@
 import grafo_ponderado as GRP
 import instance_generator as ig
 
-# Grafo ejemplo con listas de adyacencia y pesos asociados
+# Hola Grafo ejemplo con listas de adyacencia y pesos asociados
 '''grafo = {'A': [('B', 1), ('C', 2), ('D', 3)],
          'B': [('A', 1), ('C', 4)],
          'C': [('A', 2), ('B', 4), ('D', 5)],
