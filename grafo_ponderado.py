@@ -12,6 +12,9 @@ class WeightedGraph(GR.Graph):
     def __init__(self, graph={}):
         super().__init__(graph)
 
+    # Devuelve el camino más corto entre dos nodos
+    # camino más corto == el de menor peso
+    # Algoritmo de Dijkstra para grafos ponderados
     def shortestPath(self, start, end):
         INF = float('inf')
         # Diccionario de nodos con un peso infinito

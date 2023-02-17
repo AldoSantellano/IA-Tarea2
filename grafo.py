@@ -1,5 +1,10 @@
 # grafo no dirigido
 # admite lazos 
+#grafo ejemplo
+'''grafo = {'A': [('B', 1), ('C', 2), ('D', 3)],
+         'B': [('A', 1), ('C', 4)],
+         'C': [('A', 2), ('B', 4), ('D', 5)],
+         'D': [('A', 3), ('C', 5)]}'''
 
 class Graph():
     # Constructor, por defecto crea un diccionario vacío
