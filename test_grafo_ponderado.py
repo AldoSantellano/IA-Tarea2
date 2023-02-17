@@ -1,5 +1,6 @@
 import grafo_ponderado as GRP
 import instance_generator as ig
+import time as tiempo
 
 # Hola Grafo ejemplo con listas de adyacencia y pesos asociados
 '''grafo = {'A': [('B', 1), ('C', 2), ('D', 3)],
@@ -18,6 +19,7 @@ import instance_generator as ig
 #Modifique el grafo de ejemplo para probar mejor Dijkstra, pero el inicial lo guarde en la pestaña "grafo.py"
 
 def testGrafo():
+    tiempo_inicio() = tiempo.time()
     grafo = ig.create_instance(50)
     g = GRP.WeightedGraph(grafo)    # Crear el grafo con el diccionario de ejemplo
     while (len(g.isolatedNodes())>0):
@@ -36,7 +38,10 @@ def testGrafo():
 
     print('\nComprobaciones')
     print('Vacío:', g.isEmpty())                    # Comprobar si grafo vacío
-
+    
+    tiempo_final = tiempo.time()
+    tiempo_ejecucion = tiempo_final - tiempo_inicio()
+    print('Tiempo de ejecución: ', tiempo_ejecucion)
         
      # Obtener el camino más corto entre dos nodos
     path, weight = g.shortestPath('1', '50')
