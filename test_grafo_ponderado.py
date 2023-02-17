@@ -4,10 +4,17 @@ import instance_generator as ig
 # Grafo ejemplo con listas de adyacencia y pesos asociados
 '''grafo = {'A': [('B', 1), ('C', 2), ('D', 3)],
          'B': [('A', 1), ('C', 4)],
-         'C': [('A', 2), ('B', 4), ('D', 5), ('E', 5)],
-         'D': [('A', 3), ('C', 5), ('E', 5), ('G', 6)],
-         'E': [('C', 2), ('G', 4), ('D', 5)],
-         'G': [('A', 3), ('C', 5)]} '''
+         'C': [('A', 2), ('B', 4), ('D', 5)],
+         'D': [('A', 3), ('C', 5)]} '''
+
+'''grafo = {'1': [('2', 4), ('3', 3)],
+         '2': [('5', 8)],
+         '3': [('4', 12), ('6', 4)],
+         '4': [('6', 2), ('7', 20), ('8', 15)],
+         '5': [('7', 17)],
+         '6': [('8', 22)],
+         '7': [('8', 9)],
+         '8': [('1', 1)]} '''
 #Modifique el grafo de ejemplo para probar mejor Dijkstra, pero el inicial lo guarde en la pestaña "grafo.py"
 
 def testGrafo():
@@ -32,8 +39,8 @@ def testGrafo():
 
         
      # Obtener el camino más corto entre dos nodos
-    #path, weight = g.shortestPath('1', '50')
-    #print(f'Dijkstra: ruta 1-10:{path} peso:{weight}')
+    path, weight = g.shortestPath('1', '50')
+    print(f'Dijkstra: ruta 1-10:{path} peso:{weight}')
 
 if __name__ == '__main__':
     testGrafo()
