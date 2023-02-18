@@ -47,7 +47,7 @@ def testGrafo():
     tiempo_final = tiempo.time()
     tiempo_ejecucion = tiempo_final - tiempo_inicio
     print('Tiempo de ejecución: ', tiempo_ejecucion)
-    print(f'Dijkstra: ruta 1-10:{path} peso:{weight}')
+    print(f'Dijkstra: {path} peso:{weight}')
 
 if __name__ == '__main__':
     testGrafo()
