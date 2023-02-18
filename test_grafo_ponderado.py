@@ -19,8 +19,8 @@ import time as tiempo
 #Modifique el grafo de ejemplo para probar mejor Dijkstra, pero el inicial lo guarde en la pestaña "grafo.py"
 
 def testGrafo():
-    tiempo_inicio() = tiempo.time()
-    grafo = ig.create_instance(50)
+    
+    grafo = ig.create_instance(1000)
     g = GRP.WeightedGraph(grafo)    # Crear el grafo con el diccionario de ejemplo
     while (len(g.isolatedNodes())>0):
         grafo = ig.create_instance(50);
@@ -39,12 +39,14 @@ def testGrafo():
     print('\nComprobaciones')
     print('Vacío:', g.isEmpty())                    # Comprobar si grafo vacío
     
-    tiempo_final = tiempo.time()
-    tiempo_ejecucion = tiempo_final - tiempo_inicio()
-    print('Tiempo de ejecución: ', tiempo_ejecucion)
+    
         
      # Obtener el camino más corto entre dos nodos
-    path, weight = g.shortestPath('1', '50')
+    tiempo_inicio = tiempo.time()
+    path, weight = g.shortestPath('1', '1000')
+    tiempo_final = tiempo.time()
+    tiempo_ejecucion = tiempo_final - tiempo_inicio
+    print('Tiempo de ejecución: ', tiempo_ejecucion)
     print(f'Dijkstra: ruta 1-10:{path} peso:{weight}')
 
 if __name__ == '__main__':
